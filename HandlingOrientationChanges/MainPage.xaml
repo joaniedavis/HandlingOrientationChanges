@@ -1,10 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:HandlingOrientationChanges" 
              x:Class="HandlingOrientationChanges.MainPage">
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        
+        <Label Text="Welcome to The Layout Example!" HorizontalOptions="Center" VerticalOptions="StartAndExpand" />
+        
+        <Button x:Name="sizeAllocatedR"
+                Text="OnSizeAllocated - Rearrange" />
+        <Button x:Name="sizeAllocatedS"
+                Text="OnSizeAllocated - Swap Views" />
+        <Button x:Name="basePage"
+                Text="Using A Base Page" />
+        <Button x:Name="xamarinEss"
+                Text="Using Xamarin Essentials" />
     </StackLayout>
 </ContentPage>

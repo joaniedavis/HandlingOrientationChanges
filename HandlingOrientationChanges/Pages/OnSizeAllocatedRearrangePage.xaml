@@ -17,17 +17,27 @@
             </Grid.RowDefinitions>
 
             <Label x:Name="title"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
                    Text="{Binding Title}"
                    FontSize="Large" />
 
             <Label x:Name="description"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
                    Text="{Binding Description}"
                    FontSize="Medium" />
 
-                   <
-            <Label x:Name="fullText"
-                   Text="{Binding FullText}"
-                   FontSize="Medium" />
+           <ScrollView x:Name="fullTextLayout" >
+                <Label x:Name="fullText"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Text="{Binding FullText}"
+                       FontSize="Medium" />
+           </ScrollView>
+
+            <Button x:Name="back"
+                    Text="Back"/>
 
             <Image x:Name="background" 
                 Aspect="Fill"

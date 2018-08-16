@@ -8,9 +8,10 @@
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="New Folder\" />
+    <Folder Include="ViewModels\" />
     <Folder Include="Utilities\" />
     <Folder Include="EmbeddedResources\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="EmbeddedResources\SnowyCreek.png" />
