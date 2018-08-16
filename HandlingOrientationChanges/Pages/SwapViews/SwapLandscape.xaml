@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utilities="clr-namespace:HandlingOrientationChanges.Utilities;assembly=HandlingOrientationChanges"
+             BackgroundColor="DarkBlue"
+             x:Class="HandlingOrientationChanges.Pages.SwapViews.SwapLandscape">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Vertical"
+                         WidthRequest="250"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+                <Label TextColor="White"
+                       VerticalOptions="StartAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       Text="{Binding Title}"
+                       FontSize="40" />
+
+                <Label TextColor="White"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       Text="{Binding Description}"
+                       FontSize="Large" />
+                
+                <Button x:Name="back"
+                        TextColor="Black"
+                        VerticalOptions="EndAndExpand"
+                        BackgroundColor="LightSteelBlue"
+                        Text="Back"/>
+            </StackLayout>
+            
+            <ScrollView 
+                WidthRequest="250"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand">
+                <Label TextColor="White"
+                       Text="{Binding FullText}"
+                       FontSize="Medium" />
+            </ScrollView>
+            <Image Aspect="Fill"
+                   WidthRequest="250"
+                   Source="{utilities:ImageResource HandlingOrientationChanges.EmbeddedResources.SnowyCreek.png}"/>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

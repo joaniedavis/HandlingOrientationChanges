@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:HandlingOrientationChanges" 
              x:Class="HandlingOrientationChanges.MainPage">
-    <StackLayout>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand">
         <!-- Place new controls here -->
         
-        <Label Text="Welcome to The Layout Example!" HorizontalOptions="Center" VerticalOptions="StartAndExpand" />
+        <Label Text="Welcome to The Layout Example!" 
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               FontSize="55"/>
         
         <Button x:Name="sizeAllocatedR"
                 Text="OnSizeAllocated - Rearrange" />

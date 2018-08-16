@@ -7,6 +7,9 @@ namespace HandlingOrientationChanges.Pages
 {
     public partial class OnSizeAllocatedRearrangePage : ContentPage
     {
+        private double width = 0;
+        private double height = 0;
+        
         public OnSizeAllocatedRearrangePage()
         {
             InitializeComponent();
@@ -16,9 +19,6 @@ namespace HandlingOrientationChanges.Pages
             back.Command = new Command(() => Navigation.PopModalAsync());
             
         }
-
-        private double width = 0;
-        private double height = 0;
 
         protected override void OnSizeAllocated(double width, double height)
         {
@@ -64,7 +64,10 @@ namespace HandlingOrientationChanges.Pages
             grid.Children.Add(view: fullTextLayout, left: 1, right: 2, top: 0, bottom: 3);
             grid.Children.Add(view: back, left: 0, top: 2);
             
-            grid.Children.Add(view: background, left: 3, right: 4, top: 0, bottom: 3);
+            BackgroundColor = Color.DarkBlue;
+            background.Opacity = 1.0;
+            
+            grid.Children.Add(view: background, left: 2, right: 3, top: 0, bottom: 3);
             grid.LowerChild(background);
                        
         }
@@ -80,6 +83,9 @@ namespace HandlingOrientationChanges.Pages
             grid.Children.Add(view: description, left: 0, top: 1);
             grid.Children.Add(view: fullTextLayout, left: 0, top: 2);
             grid.Children.Add(view: back, left: 0, top: 3);
+            
+            BackgroundColor = Color.Black;
+            background.Opacity = 0.6;
             
             grid.Children.Add(view: background, left: 0, right: 1, top: 0, bottom: 5);
             grid.LowerChild(background);

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
+             xmlns:utilities="clr-namespace:HandlingOrientationChanges.Utilities;assembly=HandlingOrientationChanges"
+             x:Class="HandlingOrientationChanges.Pages.SwapViews.SwapPortrait">
+    <ContentView.Content>
+        <Grid>
+            
+            <Image Aspect="Fill"
+                   Opacity="0.6"
+                   Source="{utilities:ImageResource HandlingOrientationChanges.EmbeddedResources.SnowyCreek.png}"/>
+
+            <StackLayout>
+                <Label TextColor="White"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Text="{Binding Title}"
+                       FontSize="40" />
+
+                <Label TextColor="White"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Text="{Binding Description}"
+                       FontSize="Large" />
+
+                <ScrollView >
+                    <Label TextColor="White"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="Center"
+                           Text="{Binding FullText}"
+                           FontSize="Medium" />
+                </ScrollView>
+
+                <Button x:Name="back"
+                        TextColor="Black"
+                        VerticalOptions="End"
+                        BackgroundColor="LightSteelBlue"
+                        Text="Back"/>
+            </StackLayout>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

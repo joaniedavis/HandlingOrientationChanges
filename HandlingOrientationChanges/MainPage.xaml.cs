@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HandlingOrientationChanges.Pages;
+using HandlingOrientationChanges.Pages.SwapViews;
 using HandlingOrientationChanges.ViewModels;
 using Xamarin.Forms;
 

@@ -1,9 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
@@ -18,5 +16,13 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EmbeddedResources\SnowyCreek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\SwapViews\SwapLandscape.xaml.cs">
+      <DependentUpon>SwapLandscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\SwapViews\SwapPortrait.xaml.cs">
+      <DependentUpon>SwapPortrait.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
