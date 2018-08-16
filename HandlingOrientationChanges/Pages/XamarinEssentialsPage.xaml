@@ -1,5 +1,56 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HandlingOrientationChanges.Pages.XamarinEssentialsPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utilities="clr-namespace:HandlingOrientationChanges.Utilities" 
+             BackgroundColor="Black"
+             x:Class="HandlingOrientationChanges.Pages.XamarinEssentialsPage">
     <ContentPage.Content>
+        <Grid x:Name="grid"
+              Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="title"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Text="{Binding Title}"
+                   FontSize="40" />
+
+            <Label x:Name="description"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Text="{Binding Description}"
+                   FontSize="Large" />
+
+           <ScrollView x:Name="fullTextLayout" >
+                <Label x:Name="fullText"
+                       TextColor="White"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="Center"
+                       Text="{Binding FullText}"
+                       FontSize="Medium" />
+           </ScrollView>
+
+            <Button x:Name="back"
+                    TextColor="Black"
+                    VerticalOptions="End"
+                    BackgroundColor="LightSteelBlue"
+                    Text="Back"/>
+
+            <Image x:Name="background" 
+                Aspect="Fill"
+                Opacity="0.6"
+                Source="{utilities:ImageResource HandlingOrientationChanges.EmbeddedResources.SnowyCreek.png}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
