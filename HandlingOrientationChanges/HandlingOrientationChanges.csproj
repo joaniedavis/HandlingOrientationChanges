@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="New Folder\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="EmbeddedResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="EmbeddedResources\SnowyCreek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResources\SnowyCreek.png" />
+  </ItemGroup>
+</Project>

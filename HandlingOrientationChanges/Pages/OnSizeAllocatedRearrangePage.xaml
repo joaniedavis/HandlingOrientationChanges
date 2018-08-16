@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utilities="clr-namespace:HandlingOrientationChanges.Utilities" 
+             x:Class="HandlingOrientationChanges.Pages.OnSizeAllocatedRearrangePage">
+    <ContentPage.Content>
+        <Grid x:Name="grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="title"
+                   Text="{Binding Title}"
+                   FontSize="Large" />
+
+            <Label x:Name="description"
+                   Text="{Binding Description}"
+                   FontSize="Medium" />
+
+                   <
+            <Label x:Name="fullText"
+                   Text="{Binding FullText}"
+                   FontSize="Medium" />
+
+            <Image x:Name="background" 
+                Aspect="Fill"
+                Source="{utilities:ImageResource HandlingOrientationChanges.EmbeddedResources.SnowyCreek.png}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
