@@ -11,6 +11,7 @@
     <Folder Include="Utilities\" />
     <Folder Include="EmbeddedResources\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Pages\BasePage\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="EmbeddedResources\SnowyCreek.png" />

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<basePage:OrientationContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:basePage="clr-namespace:HandlingOrientationChanges.Pages.BasePage;assembly=HandlingOrientationChanges"
+             xmlns:utilities="clr-namespace:HandlingOrientationChanges.Utilities;assembly=HandlingOrientationChanges"
+             x:Class="HandlingOrientationChanges.Pages.BasePage.UsingBasePage">
+    <basePage:OrientationContentPage.Content>
+       <Grid x:Name="grid" >
+              <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="*" />
+                     <ColumnDefinition Width="*" />
+                     <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
+              </Grid.RowDefinitions>
+
+        <Label x:Name="title"
+               TextColor="White"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Text="{Binding Title}"
+               FontSize="40" />
+
+        <Label x:Name="description"
+               TextColor="White"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Text="{Binding Description}"
+               FontSize="Large" />
+
+        <ScrollView x:Name="fullTextLayout" >
+            <Label x:Name="fullText"
+                   TextColor="White"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   Text="{Binding FullText}"
+                   FontSize="Medium" />
+        </ScrollView>
+
+        <Button x:Name="back"
+                TextColor="Black"
+                VerticalOptions="End"
+                BackgroundColor="LightSteelBlue"
+                Text="Back"/>
+
+        <Image x:Name="background" 
+               Aspect="Fill"
+               Opacity="0.6"
+               Source="{utilities:ImageResource HandlingOrientationChanges.EmbeddedResources.SnowyCreek.png}"/>
+        </Grid>
+    </basePage:OrientationContentPage.Content>
+</basePage:OrientationContentPage>

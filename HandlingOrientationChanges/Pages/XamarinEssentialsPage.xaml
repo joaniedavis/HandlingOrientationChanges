@@ -5,8 +5,7 @@
              BackgroundColor="Black"
              x:Class="HandlingOrientationChanges.Pages.XamarinEssentialsPage">
     <ContentPage.Content>
-        <Grid x:Name="grid"
-              Padding="20">
+        <Grid x:Name="grid" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
