@@ -12,6 +12,7 @@
     <Folder Include="EmbeddedResources\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Pages\BasePage\" />
+    <Folder Include="Pages\PreferredPage\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="EmbeddedResources\SnowyCreek.png" />

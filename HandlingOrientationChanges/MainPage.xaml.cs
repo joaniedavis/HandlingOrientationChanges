@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HandlingOrientationChanges.Pages;
 using HandlingOrientationChanges.Pages.BasePage;
+using HandlingOrientationChanges.Pages.PreferredPage;
 using HandlingOrientationChanges.Pages.SwapViews;
 using HandlingOrientationChanges.ViewModels;
 using Xamarin.Forms;
@@ -29,6 +30,10 @@ namespace HandlingOrientationChanges
                 BindingContext = new PageViewModel()
             }));
             xamarinEss.Command = new Command(() => Navigation.PushModalAsync(new XamarinEssentialsPage()
+            {
+                BindingContext = new PageViewModel()
+            }));
+            prefBasePage.Command = new Command(() => Navigation.PushModalAsync(new PreferredPage()
             {
                 BindingContext = new PageViewModel()
             }));

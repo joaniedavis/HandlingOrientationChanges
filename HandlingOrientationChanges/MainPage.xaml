@@ -20,5 +20,7 @@
                 Text="Using A Base Page" />
         <Button x:Name="xamarinEss"
                 Text="Using Xamarin Essentials" />
+        <Button x:Name="prefBasePage"
+                Text="My Preferred Method" />
     </StackLayout>
 </ContentPage>
