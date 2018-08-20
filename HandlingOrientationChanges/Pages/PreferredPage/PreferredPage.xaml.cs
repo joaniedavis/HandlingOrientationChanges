@@ -1,31 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Drawing;
 using HandlingOrientationChanges.Pages.BasePage;
 using HandlingOrientationChanges.Pages.SwapViews;
-using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace HandlingOrientationChanges.Pages.PreferredPage
 {
     public partial class PreferredPage : PreferredOrientationContentPage
     {
-        private SwapLandscape Landscape;
-        private SwapPortrait Portrait;
         
         public PreferredPage()
         {
             InitializeComponent();
-            Portrait = new SwapPortrait();
-            Landscape = new SwapLandscape();
+            this.PortraitLayoutType = typeof(SwapPortrait);
         }
+
 
         protected override void SetupLandscapeLayout()
         {
-            Content = Landscape;
-        }
-
-        protected override void SetupPortraitLayout()
-        {
-            Content = Portrait;
+            Content = new SwapLandscape();
+            Content.BackgroundColor = Color.DarkSlateGray;
         }
     }
 }

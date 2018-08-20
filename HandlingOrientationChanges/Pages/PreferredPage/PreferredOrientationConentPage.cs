@@ -7,6 +7,8 @@ namespace HandlingOrientationChanges.Pages.BasePage
     {
         private double width = 0;
         private double height = 0;
+        protected Type LandscapeLayoutType;
+        protected Type PortraitLayoutType;
 
         public event EventHandler<PageOrientationEventArgs> OnOrientationChanged = (e, a) => { };
 
@@ -46,8 +48,21 @@ namespace HandlingOrientationChanges.Pages.BasePage
                 SetupPortraitLayout();
             }
         }
-        
-        protected abstract void SetupLandscapeLayout();
-        protected abstract void SetupPortraitLayout();
+
+        protected virtual void SetupLandscapeLayout()
+        {
+            if (LandscapeLayoutType != null)
+            {
+                Content = Activator.CreateInstance(LandscapeLayoutType) as View; 
+            }
+        }
+
+        protected virtual void SetupPortraitLayout()
+        {
+            if (PortraitLayoutType != null)
+            {
+                Content = Activator.CreateInstance(PortraitLayoutType) as View;
+            }
+        }
     } 
 }

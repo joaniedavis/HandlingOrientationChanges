@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <basePage:PreferredOrientationContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
              xmlns:basePage="clr-namespace:HandlingOrientationChanges.Pages.BasePage;assembly=HandlingOrientationChanges"
              x:Class="HandlingOrientationChanges.Pages.PreferredPage.PreferredPage">
     <basePage:PreferredOrientationContentPage.Content>
